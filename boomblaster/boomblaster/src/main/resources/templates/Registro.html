@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/registro.css" />
+  <script src="js/registro.js"></script>
+  <title>Registro</title>
+</head>
+
+<body>
+  <div class="contenedorRegistro">
+    <div class="contRegistrar">
+      <h1>Registro de Usuario</h1>
+      <form action="" class="formularioRegistro">
+        <div class="campoRegistro">
+          <label for="nombre">Nombre:</label>
+          <input type="text" name="" id="usuario" placeholder="Nombre" class="cuadroTexto" />
+        </div>
+        <div class="campoRegistro">
+          <label for="apellido">Apellido:</label>
+          <input type="text" name="" id="apellido" placeholder="Apellido" class="cuadroTexto" />
+        </div>
+        <div class="campoRegistro">
+          <label for="email">Direccion de correo:</label>
+          <input type="email" name="" id="email" placeholder="usuario@ejemplo.com" class="cuadroTexto" />
+        </div>
+        <div class="campoRegistro">
+          <label for="contraseña">Contraseña:</label>
+          <input type="password" name="" id="contra" placeholder="Contraseña" class="cuadroTexto" />
+        </div>
+        <div class="campoRegistro">
+          <label for="confirmarContra">Confirmar contraseña:</label>
+          <input type="password" name="" id="confirmarContra" placeholder="Confirmar contraseña" class="cuadroTexto" />
+        </div>
+        <div class="contBtnReg">
+          <input type="button" value="Registrar" class="btnRegistrar" onclick="RegistrarUsuario()" />
+          <a href="Login.html" style="text-decoration: none" class="btnCancelar">
+            Cancelar
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

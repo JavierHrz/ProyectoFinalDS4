@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina principal</title>
+    <link rel="stylesheet" href="css/reportes.css">
+    <script src="js/reportes.js"></script>
+</head>
+
+<body>
+    <div class="todo">
+        <!--BARRA LATERAL-->
+        <nav class="sideBar" onclick="ToggleMenu();">
+            <div class="Logo-Cerrar">
+                <img src="media/logo.png" alt="" class="logo">
+                <button class="Cerrar">
+                    <h3>x</h3>
+                </button>
+            </div>
+
+            <div class="opcionesSideBar">
+                <a href="http://127.0.0.1:5500/src/main/resources/templates/Admin-reportes.html">
+                    <button>
+                        <img src="media/sparkles.png" alt="xd">
+                        <span>Pagina principal</span>
+                    </button>
+                </a>
+            </div>
+            <div class="opcionesSideBar">
+                <a href="http://127.0.0.1:5500/src/main/resources/templates/Admin-crud-fuegos.html">
+                    <button>
+                        <img src="media/sparkles.png" alt="xd">
+                        <span>Fuegos artificiales</span>
+                    </button>
+                </a>
+            </div>
+            <div class="opcionesSideBar">
+                <a href="http://127.0.0.1:5500/src/main/resources/templates/Admin-crud-tiendas.html">
+                    <button>
+                        <img src="media/tiendita.png" alt="xd">
+                        <span>Tiendas</span>
+                    </button>
+                </a>
+            </div>
+            <div class="opcionesSideBar">
+                <a href="http://127.0.0.1:5500/src/main/resources/templates/Admin-crud-publicaciones.html">
+                    <button>
+                        <img src="media/papelito.png" alt="xd">
+                        <span>Publicaciones</span>
+                    </button>
+                </a>
+            </div>
+
+            <div class="opcionesSideBar">
+                <a href="http://127.0.0.1:5500/src/main/resources/templates/Admin-contactos.html">
+                    <button>
+                        <img src="media/a.png" alt="xd">
+                        <span>Contáctanos</span>
+                    </button>
+                </a>
+            </div>
+
+            <div class="opcionesSideBar">
+                <a href="http://127.0.0.1:5500/src/main/resources/templates/Admin-AvisoLegal.html">
+                    <button>
+                        <img src="media/contrato.png" alt="xd">
+                        <span>Informacion Legal</span>
+                    </button>
+                </a>
+            </div>
+        </nav>
+
+        <div class="contenedorGeneral">
+            <!--BARRA SUPERIOR-->
+            <header class="superior">
+                <div>
+                    <div class="menutoggle" onclick="ToggleMenu();"></div>
+                    <div class="titlerep">
+                        <h3>Productos</h3>
+                    </div>
+                </div>
+
+                <div class="user">
+                    <img src="media/user.png" alt="pfp" />
+                    <h5 class="nombreUs" id="usuarioNombre"></h5>
+                    <h5 style="color: #d10054;">{Admin}</h5>
+                    <a  href="#" onclick="cerrarSesion()">
+                        <h5 class="nombreUs" style="color:gray ;">Salir</h5>
+                    </a>
+                </div>
+            </header>
+
+            <div class="contenedorInformacion">
+
+
+                <div class="Filtros">
+                    <!--FILTRO POR TIPO FA-->
+                    <div class="contFiltro">
+                        <div class="filtroTitulo">
+                            <label for="listaTipo">Tipo: </label>
+                        </div>
+                        <div class="listaTipo">
+                            <select name="listaTipo" id="listaTipo">
+                                <option value="" disabled selected hidden>Selecciona una opción</option>
+                                <option value="default">Por defecto</option>
+                                <option value="Baterias">Baterias</option>
+                                <option value="Cascadas">Cascadas</option>
+                                <option value="Cohetes">Cohetes</option>
+                                <option value="Petardo">Petardos</option>
+                                <option value="Silbadores">Silbadores</option>
+                                <option value="Candelas romanas">Candelas romanas</option>
+                                <option value="Estrellas giratorias">Estrellas giratorias</option>
+                                <option value="Fuegos artificiales acuáticos">Fuegos artificiales acuáticos</option>
+                                <option value="Fuegos artificiales silenciosos">Fuegos artificiales silenciosos</option>
+                                <option value="Fuegos artificiales de colores específicos">Fuegos artificiales de colores específicos</option>
+                                <option value="Fuegos artificiales de formas específicas">Fuegos artificiales de formas específicas</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <!--FILTRO POR COLOR-->
+                    <div class="contFiltro">
+                        <div class="filtroTitulo">
+                            <label for="listaExplosion">Explosion: </label>
+                        </div>
+                        <div class="listaExplosion">
+                            <select name="listaExplosion" id="listaExplosion">
+                                <option value="" disabled selected hidden>Selecciona una opción</option>
+                                <option value="default">Por defecto</option>
+                                <option value="baja">Baja</option>
+                                <option value="media">Media</option>
+                                <option value="alta">Alta</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <!--BARRA DE BUSQUEDA-->
+                    <div class="contFiltro">
+                        <div class="filtroTitulo">
+                            <a>Buscar:</a>
+                        </div>
+
+                        <div class="filtroLista">
+                            <input type="text" class="filtroBusqueda" id="barraBusqueda" placeholder="Buscar..."
+                                onkeyup="search()">
+                        </div>
+                    </div>
+
+                    <!--FILTRO POR PRECIO-->
+                    <div class="contFiltro">
+                        <div class="filtroTitulo">
+                            <label for="listaOrden">Orden: </label>
+                        </div>
+                        <div class="listaOrden">
+                            <select name="listaOrden" id="listaOrden">
+                                <option value="default" disabled selected hidden>Selecciona una opción</option>
+                                <option value="default" selected>Por defecto</option>
+                                <option value="ascendente">Ascendente</option>
+                                <option value="descendente">Descendente</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--CONTENEDOR DE FUEGOS ARTIFICIALES-->
+                <div class="contenedorFuegoArtificial" id="contenedorInformacion">
+
+                </div>
+                <!--BOTONES DE PAGINACION-->
+                <div class="pagination">
+                </div>
+            </div>
+        </div><!--FIN CONTENEDOR GENERAL-->
+
+    </div>
+    <!--FOOTER-->
+    <footer>
+        <div class="footer-container">
+            <div class="footer">
+                <div class="info-footer">
+                    <img src="media/logoutp.png" alt="logo utp blanco">
+                    <p>Este sitio es administrado por la Facultad<br>
+                        de Ingenieria en Sistemas<br>
+                        Computacionales. Proyecto web donado<br>
+                        por el grupo 1LS121, segundo semestre<br>
+                        2023.
+                    </p>
+                </div>
+                <div class="contacto">
+                    <h1>Contacto</h1>
+                    <p>Avenida Universidad Tecnológica de Panamá, Vía Puente <br>
+                        Centenario, Campus Metropolitano Dr. Victor Levi Sasso, <br>
+                        Edificio No.3, tercer piso. <br>
+                        Teléfono: (507) 560-3639 y (507) 560-3619 <br>
+                        E-mail: <a class="email" href="#">sindy.delosrios@utp.ac.pa</a>
+                    </p>
+                </div>
+                <div class="redes">
+                    <img src="media/brand-facebook.png" alt="facebook">
+                    <img src="media/brand-instagram.png" alt="instagram">
+                    <img src="media/brand-youtube.png" alt="youtube">
+                    <img src="media/brand-linkedin.png" alt="linkedin">
+                    <img src="media/brand-x.png" alt="twitter x">
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023 - Universidad Tecnológica de Panamá</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

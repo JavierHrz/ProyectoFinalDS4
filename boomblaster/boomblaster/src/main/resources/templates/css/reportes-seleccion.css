@@ -1,0 +1,437 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+body {
+  font-family: Montserrat;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo {
+  display: flex;
+}
+
+/*ESTILOS SIDEBAR*/
+/*ESTILOS SIDEBAR*/
+nav {
+  width: 13%;
+  background-color: #fc4472;
+  position: fixed;
+  height: 800px;
+  z-index: 100;
+  left: -100%;
+  transition: 0.5s;
+}
+
+nav.active {
+  left: 0%;
+}
+
+nav .lista {
+  position: relative;
+  padding: 12px 25px;
+  text-decoration: none;
+  color: white;
+  background-color: rgba(0, 255, 234, 0);
+  display: inline-block;
+  transition: 0.5s;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+nav a:hover {
+  background-color: orangered;
+  border-radius: 10px;
+  transition: 1s;
+  color: black;
+}
+
+nav .lista span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  border-radius: 10px;
+  transform: scale(0) translateY(50px);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+nav .lista:hover span {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+.logo {
+  width: 100%;
+}
+
+.Logo-Cerrar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Logo-Cerrar button h3 {
+  margin-left: 5px;
+  color: white;
+}
+
+.Cerrar {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.opcionesSideBar button {
+  display: flex;
+  width: 100%;
+  height: 43px;
+  padding: 10px;
+  color: white;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 0.4s;
+}
+
+.opcionesSideBar button img {
+  width: 23px;
+  margin-right: 5px;
+}
+
+.opcionesSideBar button a {
+  text-decoration: none;
+}
+
+.opcionesSideBar button:hover {
+  background-color: #ffffff;
+  color: #d10054;
+  transition: background-color 0.4s;
+}
+
+.menutoggle {
+  position: relative;
+  left: 10px;
+  width: 30px;
+  height: 20px;
+  background-image: url(/src/main/resources/templates/media/menu-2.png);
+  background-size: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: 1px black;
+}
+
+.menutoggle.active {
+  background-image: url(/src/main/resources/templates/media/menu-2.png);
+  background-size: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+/***************************************************************************************/
+
+/*ESTILOS BARRA SUPERIOR*/
+header {
+  background-image: url("/src/main/resources/templates/media/fondo.webp");
+  filter: brightness(0.9);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.titlerep {
+  text-wrap: nowrap;
+}
+.titlerep h3 {
+  color: white;
+}
+
+.titlerep.active {
+  margin-left: 90%;
+  transition: 1s;
+}
+
+.nombreUs {
+  color: white;
+}
+
+.user.active {
+  transition: 1s;
+}
+
+header h3 {
+  margin-left: 20px;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+header div img {
+  margin-right: 10px;
+  width: 25px;
+}
+.contenedorGeneral {
+  width: 100%;
+  background-color: #ebebeb;
+}
+
+.contenedorInformacion {
+  background-color: white;
+  margin: 15px;
+  border-radius: 10px;
+  padding-bottom: 3px;
+}
+
+.contenedorFuegoArtificial {
+  display: flex;
+  background-color: white;
+}
+
+.contenedorFuegoArtificial img {
+  margin-top: 20px;
+  margin-left: 15px;
+  width: 34%;
+  height: 100%;
+}
+
+
+#botonInicioSesion{
+ 
+  padding: 8px 12px;
+  margin: 0 5px;
+  text-decoration: none;
+  border: 1px solid #adadad;
+  border-radius: 4px;
+  background-color:  #fc4472;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  color: white;
+}
+
+/* Estilo para el contenedor de información */
+.InfoFuegoArtificial {
+  margin-top: 10px;
+}
+
+.textito {
+  margin-top: 10px;
+}
+
+/* Estilo para la información adicional */
+.masInfo {
+  margin-top: 20px;
+}
+
+.InfoFuegoArtificial {
+  margin-top: 30px;
+  margin-left: 15px;
+}
+
+.precio {
+  color: #d10054;
+}
+
+.desc {
+  width: 600px;
+}
+.clasif {
+  margin-top: 50px;
+}
+.textito {
+  font-size: 12px;
+}
+
+.masInfo {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.masInfo p {
+  padding-left: 60px;
+}
+.masInfo h3 {
+  padding-left: 20px;
+  color: #ef2054;
+}
+
+/*ESTILOS DE COMENTARIOS*/
+.contenedorComentarios {
+  text-align: center;
+  margin: 15px;
+  background-color: white;
+}
+
+.contenedorComentarios h3 {
+  text-align: left;
+  color: #ef2054;
+  margin-left: 55px;
+  padding-top: 20px;
+}
+
+.agregarComent {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.agregarComent .otros div {
+  padding-bottom: 10px;
+}
+
+.contenedortextoComent {
+  display: flex;
+}
+
+.entrada {
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  margin-left: 10px;
+}
+
+.textoComentario {
+  margin-left: 10px;
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 400px;
+  height: 40px;
+}
+
+.botonPublicar {
+  margin-top: 20px;
+  width: 120px;
+  background-color: #fc4472;
+  color: #fff;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+
+.botonPublicar:hover {
+  background-color: #ef2054;
+}
+
+.comentario {
+  display: flex;
+  padding: 10px;
+}
+
+.comentario div img {
+  width: 270px;
+  margin: 15px;
+  max-width: 270px;
+}
+
+.personaC {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  padding-left: 10px;
+}
+
+.nombreComentario {
+  text-align: left;
+}
+
+hr {
+  border-color: rgba(227, 227, 227, 0.33);
+  width: 95%;
+}
+
+/*FOOTER*/
+.footer-container {
+  font-family: "Raleway", sans-serif;
+  background: #444444;
+  width: 100%;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  font-family: "Montserrat", sans-serif;
+  bottom: 0;
+  left: 0;
+  min-height: 24vmin;
+}
+
+/*PARTE IZQUIERDA*/
+.footer-container .footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.footer-container .footer .info-footer {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  line-height: 14px;
+}
+
+.footer-container .footer .info-footer img {
+  width: 80px;
+  margin-right: 30px;
+}
+
+/*PARTE CENTRAL*/
+.footer-container .footer .contacto {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-container .footer .contacto h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.footer-container .footer .contacto p {
+  margin-top: 0;
+}
+
+.email {
+  color: white;
+}
+
+/*PARTE DERECHA*/
+.footer-container .footer .redes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.footer-container .footer .redes img {
+  width: 20px;
+  padding: 3px;
+}
+
+.footer-container .copyright p {
+  color: #ffffff;
+}

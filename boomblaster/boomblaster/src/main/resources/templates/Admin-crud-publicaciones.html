@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/admin-crud-publicaciones.css" />
+    <title>Admin - Crud - Publicaciones</title>
+</head>
+
+<body>
+    <div class="todo">
+        <!--BARRA LATERAL-->
+        <nav class="sideBar" onclick="ToggleMenu();">
+            <div class="Logo-Cerrar">
+                <img src="media/logo.png" alt="" class="logo" />
+                <button class="Cerrar">
+                    <h3>x</h3>
+                </button>
+            </div>
+
+<div class="opcionesSideBar">
+                <a href="http://127.0.0.1:5500/src/main/resources/templates/Admin-reportes.html">
+                    <button>
+                        <img src="media/sparkles.png" alt="xd">
+                        <span>Pagina principal</span>
+                    </button>
+                </a>
+            </div>
+            <div class="opcionesSideBar">
+                <a href="http://127.0.0.1:5500/src/main/resources/templates/Admin-crud-fuegos.html">
+                    <button>
+                        <img src="media/sparkles.png" alt="xd">
+                        <span>Fuegos artificiales</span>
+                    </button>
+                </a>
+            </div>
+            <div class="opcionesSideBar">
+                <a href="http://127.0.0.1:5500/src/main/resources/templates/Admin-crud-tiendas.html">
+                    <button>
+                        <img src="media/tiendita.png" alt="xd">
+                        <span>Tiendas</span>
+                    </button>
+                </a>
+            </div>
+            <div class="opcionesSideBar">
+                <a href="http://127.0.0.1:5500/src/main/resources/templates/Admin-crud-publicaciones.html">
+                    <button>
+                        <img src="media/papelito.png" alt="xd">
+                        <span>Publicaciones</span>
+                    </button>
+                </a>
+            </div>
+
+            <div class="opcionesSideBar">
+                <a href="http://127.0.0.1:5500/src/main/resources/templates/Admin-Contactos.html">
+                    <button>
+                        <img src="media/a.png" alt="xd">
+                        <span>Contáctanos</span>
+                    </button>
+                </a>
+            </div>
+
+            <div class="opcionesSideBar">
+                <a href="http://127.0.0.1:5500/src/main/resources/templates/Admin-AvisoLegal.html">
+                    <button>
+                        <img src="media/contrato.png" alt="xd">
+                        <span>Informacion Legal</span>
+                    </button>
+                </a>
+            </div>
+
+        </nav>
+
+        <div class="contenedorGeneral">
+            <!--BARRA SUPERIOR-->
+            <header class="superior">
+                <div>
+                    <div class="menutoggle" onclick="ToggleMenu();"></div>
+                    <div class="titlerep" onclick="ToggleMenu();">
+                        <h4 class="nombreUs">CRUD/Publicaciones de Usuarios</h4>
+                    </div>
+                </div>
+                <div class="user">
+                    <img src="media/user.png" alt="pfp" />
+                    <h5 class="nombreUs" id="usuarioNombre"> </h5>
+                    <h5 style="color: #d10054;">{Admin} </h5>
+                    <a href="#" onclick="cerrarSesion()">
+                        <h5 class="nombreUs" style="color:gray ;">Salir</h5>
+                    </a>
+                </div>
+            </header>
+
+            <div class="contenedorInformacion">
+                <form class="Filtros">
+                    <!--User-->
+                    <div class="contFiltro">
+                        <div class="filtroTitulo">
+                            <a>Usuario:</a>
+                        </div>
+                        <div class="filtroLista">
+                            <input type="search" class="filtroBusqueda" name="nombre_tienda"
+                                placeholder="Ingrese el nombre del Usuario" />
+                        </div>
+                    </div>
+
+                    <!--Busqueda-->
+                    <div class="contFiltro">
+                        <div class="filtroTitulo">
+                            <a>Buscar:</a>
+                        </div>
+                        <div class="filtroLista">
+                            <input type="search" class="filtroBusqueda" id="barraBusqueda" name="Busqueda" placeholder="Buscar" />
+                        </div>
+                    </div>
+                    <div></div>
+
+                </form>
+
+                <!--TABLA CON INFORMACION-->
+                <div class="contenedorTabla">
+                    <table class="tablaInfo" id="tablaInfo">
+                        <thead>
+                            <th col-index="1" class="tituloTabla" id="BI">ID</th>
+                            <th col-index="2" class="tituloTabla">Usuario</th>
+                            <th col-index="3" class="tituloTabla">Comentario</th>
+                            <th col-index="4" class="tituloTabla">Calificación</th>
+                            <th col-index="5" class="tituloTabla">Videos</th>
+                            <th col-index="6" class="tituloTabla">Fuego artificial:</th>
+                            <th col-index="7" class="tituloTabla" id="BD">Operación</th>
+                        </thead>
+                        <!--TABLA DE DATOS-->
+                        <tbody id="cuerpoTabla">
+
+                        </tbody>
+                    </table>
+                </div>
+                <!--BOTONES DE PAGINACION-->
+                <div class="pagination">
+                </div>
+            </div>
+        </div>
+        <!--FIN CONTENEDOR GENERAL-->
+    </div>
+    </div>
+    <!--FOOTER-->
+    <footer>
+        <div class="footer-container">
+            <div class="footer">
+                <div class="info-footer">
+                    <img src="media/logoutp.png" alt="logo utp blanco">
+                    <p>Este sitio es administrado por la Facultad<br>
+                        de Ingenieria en Sistemas<br>
+                        Computacionales. Proyecto web donado<br>
+                        por el grupo 1LS121, segundo semestre<br>
+                        2023.
+                    </p>
+                </div>
+                <div class="contacto">
+                    <h1>Contacto</h1>
+                    <p>Avenida Universidad Tecnológica de Panamá, Vía Puente <br>
+                        Centenario, Campus Metropolitano Dr. Victor Levi Sasso, <br>
+                        Edificio No.3, tercer piso. <br>
+                        Teléfono: (507) 560-3639 y (507) 560-3619 <br>
+                        E-mail: <a class="email" href="#">sindy.delosrios@utp.ac.pa</a>
+                    </p>
+                </div>
+                <div class="redes">
+                    <img src="media/brand-facebook.png" alt="facebook">
+                    <img src="media/brand-instagram.png" alt="instagram">
+                    <img src="media/brand-youtube.png" alt="youtube">
+                    <img src="media/brand-linkedin.png" alt="linkedin">
+                    <img src="media/brand-x.png" alt="twitter x">
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023 - Universidad Tecnológica de Panamá</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/admin-crud-publi.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctenos</title>
+    <link rel="stylesheet" href="css/Contacto.css" />
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <div class="todo">
+        <div class="Header">
+            <nav class="sideBar" onclick="ToggleMenu();">
+                <div class="Logo-Cerrar">
+                    <img src="media/logo.png" alt="" class="logo">
+                    <button class="Cerrar">
+                        <h3>x</h3>
+                    </button>
+                </div>
+
+                <div class="opcionesSideBar">
+                    <a href="http://127.0.0.1:5500/src/main/resources/templates/Reportes.html">
+                        <button>
+                            <img src="media/xd.png" alt="xd">
+                            <span>Fuegos Artificiales</span>
+                        </button>
+                    </a>
+                </div>
+
+                <div class="opcionesSideBar">
+                    <a href="http://127.0.0.1:5500/src/main/resources/templates/Contactos.html">
+                        <button>
+                            <img src="media/a.png"" alt=" xd">
+                            <span>Contáctanos</span>
+                        </button>
+                    </a>
+                </div>
+
+                <div class="opcionesSideBar">
+                    <a href="http://127.0.0.1:5500/src/main/resources/templates/AvisoLegal.html">
+                        <button>
+                            <img src="media/contrato.png" alt="xd">
+                            <span>Información Legal</span>
+                        </button>
+                    </a>
+                </div>
+            </nav>
+
+
+            <div class="contenedorGeneral">
+                <!--BARRA SUPERIOR-->
+                <header class="superior">
+                    <div>
+                        <div class="menutoggle" onclick="ToggleMenu();"></div>
+                        <div class="titlerep">
+                            <h3>Como Contactarnos</h3>
+                        </div>
+                    </div>
+
+                    <div class="user">
+                        <img src="media/user.png" alt="pfp">
+                        <h3 class="nombreUs" id="usuarioNombre"></h3>
+                        <button id="botonInicioSesion" onclick="window.location.href='Login.html'">Iniciar Sesión</button>
+                    </div>
+                </header>
+
+            </div>
+            <div class="Cuerpo">
+                <div class="Banner">
+                    <h1>Contáctanos</h1>
+                    <p>¡Gracias por considerar comunicarte con nosotros!
+                        En Boomblasters, valoramos la
+                        interacción con nuestros usuarios y estamos aquí para
+                        ofrecerte asistencia y responder a tus preguntas. </p>
+                </div>
+                <div class="Contenido">
+                    <div class="cont1">
+                        <section class="seccionDform" id="5">
+                            <form action="#" method="post" id="si">
+                                <h1 class="titulon" id="contenedorT">Mas información Sobre Nosotros</h1>
+                                <div class="campo">
+                                    <label for="pap">Nombre:</label>
+                                    <input class="espacio" type="text" id="pap" name="name" required>
+                                </div>
+                                <div class="campo">
+                                    <label for="go">Email:</label>
+                                    <input class="espacio1" id="email" name="go" required>
+                                </div>
+                                <div class="campo">
+                                    <label for="bruh">Mensaje:</label>
+                                    <textarea class="espacio3" name="bruh" rows="4" required></textarea>
+                                </div>
+
+                                <div class="BtnSubmit">
+                                    <button type="submit">Enviar</button>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+                    <div class="cont2">
+                        <h2>Buscanos en nuestras Redes Sociales</h2>
+                        <div class="redes2">
+
+                            <img src="media/brand-facebook.png" alt="facebook">
+                            <img src="media/brand-instagram.png" alt="instagram">
+                            <img src="media/brand-youtube.png" alt="youtube">
+                            <img src="media/brand-linkedin.png" alt="linkedin">
+                            <img src="media/brand-x.png" alt="twitter x">
+                        </div>
+                        <div class="Datos">
+                            <h2>Correos</h2>
+                            <a href="#">
+                                <h4>MrBoombastic@Outlook.com</h4>
+                            </a>
+                            <a href="#">
+                                <h4>Boomblasters@gmail.com</h4>
+                            </a>
+                            <a href="#">
+                                <h4>Elpepe@Gmail.com</h4>
+                            </a>
+                        </div>
+                        <div class="Datos">
+                            <h2> Numeros Telefonicos</h2>
+                            <a href="">
+                                <h4>+1 (555) 123-4567</h4>
+                            </a>
+                            <a href="">
+                                <h4>+44 20 7946 0958</h4>
+                            </a>
+                            <a href="">
+                                <h4>+81 3-1234-5678</h4>
+                            </a>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <footer>
+            <div class="footer-container">
+                <div class="footer">
+                    <div class="info-footer">
+                        <img src="media/logoutp.png" alt="logo utp blanco">
+                        <p>Este sitio es administrado por la Facultad<br>
+                            de Ingenieria en Sistemas<br>
+                            Computacionales. Proyecto web donado<br>
+                            por el grupo 1LS121, segundo semestre<br>
+                            2023.
+                        </p>
+                    </div>
+                    <div class="contacto">
+                        <h1>Contacto</h1>
+                        <p>Avenida Universidad Tecnológica de Panamá, Vía Puente <br>
+                            Centenario, Campus Metropolitano Dr. Victor Levi Sasso, <br>
+                            Edificio No.3, tercer piso. <br>
+                            Teléfono: (507) 560-3639 y (507) 560-3619 <br>
+                            E-mail: <a class="email" href="#">sindy.delosrios@utp.ac.pa</a>
+                        </p>
+                    </div>
+                    <div class="redes">
+                        <img src="media/brand-facebook.png" alt="facebook">
+                        <img src="media/brand-instagram.png" alt="instagram">
+                        <img src="media/brand-youtube.png" alt="youtube">
+                        <img src="media/brand-linkedin.png" alt="linkedin">
+                        <img src="media/brand-x.png" alt="twitter x">
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>© 2023 - Universidad Tecnológica de Panamá</p>
+                </div>
+            </div>
+    </div>
+    </footer>
+</body>
+
+</html>

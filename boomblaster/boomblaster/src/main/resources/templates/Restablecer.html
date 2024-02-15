@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/restablecer.css" />
+    <script src="js/cambioContrasena.js"></script>
+    <title>Restrablecer contraseña</title>
+</head>
+
+<body>
+    <div class="contenedorContraseña">
+        <div class="contRestablecer">
+            <h1>Restablecer Contraseña</h1>
+            <form action="" class="formularioContraseña">
+                <div class="campoRegistro">
+                    <label for="usuario">Correo electronico:</label>
+                    <input type="text" name="" id="usuario" placeholder="Usuario@ejemplo.com" class="cuadroTexto" />
+                </div>
+                <div class="campoRegistro">
+                    <label for="contraseña">Nueva contraseña:</label>
+                    <input type="password" name="" id="contrasena" placeholder="Contraseña" class="cuadroTexto" />
+                </div>
+                <div class="campoRegistro">
+                    <label for="confirmarContraseña">Confirmar contraseña:</label>
+                    <input type="password" name="" id="confirmarContrasena" placeholder="Confirmar contraseña"
+                        class="cuadroTexto" />
+                </div>
+                <div class="contBtnCont">
+                    <button class="btnRestablecer" onclick="CambioContra()">Restablecer</button>
+                    <button onclick="cancelarRegistro2(event)" class="btnCancelar">Cancelar></button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/login.css" />
+  <script src="js/login.js"></script>
+  <title>Login</title>
+</head>
+
+<body>
+  <div class="contenedorLogin">
+    <div class="contIniciar">
+      <h1>Iniciar Sesión</h1>
+      <form onsubmit="event.preventDefault(); iniciarSesion();" method="POST" class="formularioInicioSesion">
+
+        <input type="email" name="correo" placeholder="Correo electrónico" class="cuadroTexto" id="correo" required>
+        <input type="password" name="contrasena" placeholder="Contraseña" class="cuadroTexto" id="contrasena" required>
+        <a class="restaurar" href="Restablecer.html">Restaurar usuario o contraseña</a>
+        <a href="#" class="cta">
+          <input type="submit" value="Iniciar sesión" class="btnIniciar" style="color: white;">
+          <svg width="13px" height="10px" viewBox="0 0 13 10">
+            <path d="M1,5 L11,5"></path>
+            <polyline points="8 1 12 5 8 9"></polyline>
+          </svg>
+        </a>
+
+      </form>
+    </div>
+    <div class="contRegistrarse">
+      <img src="media/logo.png" alt="logo" class="logoRegistro" />
+
+      <h1>Registrate</h1>
+      <button onclick="window.location.href='Registro.html'">Crear cuenta</button>
+    </div>
+  </div>
+
+  <div id="mensajeErrorBarra" class="mensaje-error-barra">
+    <img src="media/noo.png" alt="error">
+    <span id="cerrarMensaje" class="cerrar-mensaje" onclick="cerrarMensajeError()">X</span>
+    <div id="mensajeError"></div>
+  </div>
+
+  </div>
+</body>
+
+</html>

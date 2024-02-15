@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto</title>
+    <link rel="stylesheet" href="css/reportes-seleccion.css">
+    <script src="js/reportes-seleccion.js"></script>
+    <script src="js/comentarios.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+</head>
+
+<body>
+    <div class="todo">
+        <!--BARRA LATERAL-->
+
+        <nav class="sideBar" onclick="ToggleMenu();">
+            <div class="Logo-Cerrar">
+                <img src="media/logo.png" alt="" class="logo" h>
+                <button class="Cerrar">
+                    <h3>x</h3>
+                </button>
+            </div>
+
+            <div class="opcionesSideBar">
+                <a href="http://127.0.0.1:5500/src/main/resources/templates/Reportes.html">
+                    <button>
+                        <img src="media/xd.png" alt="xd">
+                        <span>Fuegos Pagina principal</span>
+                    </button>
+                </a>
+            </div>
+
+            <div class="opcionesSideBar">
+                <a href="http://127.0.0.1:5500/src/main/resources/templates/Contactos.html">
+                    <button>
+                        <img src="media/a.png" alt="xd">
+                        <span>Contáctanos</span>
+                    </button>
+                </a>
+            </div>
+
+            <div class="opcionesSideBar">
+                <a href="http://127.0.0.1:5500/src/main/resources/templates/AvisoLegal.html">
+                    <button>
+                        <img src="media/contrato.png" alt="xd">
+                        <span>Informacion Legal</span>
+                    </button>
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="contenedorGeneral">
+            <!--BARRA SUPERIOR-->
+            <header class="superior">
+                <div>
+                    <div class="menutoggle" onclick="ToggleMenu();"></div>
+                    <div class="titlerep">
+                        <h3>Producto</h3>
+                    </div>
+
+                </div>
+                <div class="user">
+                    <img src="media/user.png" alt="pfp">
+                    <h3 class="nombreUs" id="usuarioNombre"></h3>
+                    <button id="botonInicioSesion" onclick="window.location.href='Login.html'">Iniciar Sesión</button>
+
+                </div>
+            </header>
+            <div class="contenedorInformacion">
+                <div class="contenedorFuegoArtificial">
+
+
+
+                    <div class="InfoFuegoArtificial">
+
+                    </div>
+                </div>
+                <div class="masInfo">
+
+                </div>
+            </div>
+
+            <!--COMENTARIOS-->
+            <div class="contenedorComentarios" id="contenedorComentarios">
+                <div class="insercionComentario">
+                    <h3>
+                        Comentarios
+                    </h3>
+                    <form action="">
+                        <div class="agregarComent">
+                            <div>
+                                <div class="contenedortextoComent">
+                                    <label for="">Agregar comentario: </label>
+                                    <textarea name="" cols="30" rows="10" class="textoComentario"
+                                        id="textoComentario"></textarea>
+                                </div>
+                            </div>
+                            <div class="otros">
+                                <div>
+                                    <label for="urlMedia">Video / Foto: </label>
+                                    <input type="text" name="urlMedia" id="urlMedia" class="entrada"
+                                        placeholder="https://www.youtube.com/watch?v=...">
+                                </div>
+
+                                <label for="">Calificacion: </label>
+                                <input type="number" name="" id="calificacion" min="0" max="10" placeholder="0-10"
+                                    class="entrada">
+                            </div>
+                        </div>
+                        <div>
+                            <button type="button" class="botonPublicar" id="botonPublicar"
+                                onclick="agregarComentario()">Publicar</button>
+                        </div>
+                    </form>
+                </div>
+                <hr>
+                <div class="comentariosexistentes" id="comentariosexistentes">
+
+                </div>
+            </div><!--FIN SECCION COMENTARIOS-->
+        </div><!--FIN CONTENEDOR GENERAL-->
+
+    </div>
+    <!--FOOTER-->
+    <footer>
+        <div class="footer-container">
+            <div class="footer">
+                <div class="info-footer">
+                    <img src="media/logoutp.png" alt="logo utp blanco">
+                    <p>Este sitio es administrado por la Facultad<br>
+                        de Ingenieria en Sistemas<br>
+                        Computacionales. Proyecto web donado<br>
+                        por el grupo 1LS121, segundo semestre<br>
+                        2023.
+                    </p>
+                </div>
+                <div class="contacto">
+                    <h1>Contacto</h1>
+                    <p>Avenida Universidad Tecnológica de Panamá, Vía Puente <br>
+                        Centenario, Campus Metropolitano Dr. Victor Levi Sasso, <br>
+                        Edificio No.3, tercer piso. <br>
+                        Teléfono: (507) 560-3639 y (507) 560-3619 <br>
+                        E-mail: <a class="email" href="#">sindy.delosrios@utp.ac.pa</a>
+                    </p>
+                </div>
+                <div class="redes">
+                    <img src="media/brand-facebook.png" alt="facebook">
+                    <img src="media/brand-instagram.png" alt="instagram">
+                    <img src="media/brand-youtube.png" alt="youtube">
+                    <img src="media/brand-linkedin.png" alt="linkedin">
+                    <img src="media/brand-x.png" alt="twitter x">
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023 - Universidad Tecnológica de Panamá</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

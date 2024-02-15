@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/admin-crud-fuegos.css" />
+    <title>Admin - Crud</title>
+</head>
+
+<body>
+    <div class="todo">
+        <!--BARRA LATERAL-->
+
+        <nav class="sideBar" onclick="ToggleMenu();">
+            <div class="Logo-Cerrar">
+                <img src="media/logo.png" alt="" class="logo">
+                <button class="Cerrar">
+                    <h3>x</h3>
+                </button>
+            </div>
+
+            <div class="opcionesSideBar">
+                <a href="http://127.0.0.1:5500/src/main/resources/templates/Admin-reportes.html">
+                    <button>
+                        <img src="media/sparkles.png" alt="xd">
+                        <span>Pagina principal</span>
+                    </button>
+                </a>
+            </div>
+            <div class="opcionesSideBar">
+                <a href="http://127.0.0.1:5500/src/main/resources/templates/Admin-crud-fuegos.html">
+                    <button>
+                        <img src="media/sparkles.png" alt="xd">
+                        <span>Fuegos artificiales</span>
+                    </button>
+                </a>
+            </div>
+            <div class="opcionesSideBar">
+                <a href="http://127.0.0.1:5500/src/main/resources/templates/Admin-crud-tiendas.html">
+                    <button>
+                        <img src="media/tiendita.png" alt="xd">
+                        <span>Tiendas</span>
+                    </button>
+                </a>
+            </div>
+            <div class="opcionesSideBar">
+                <a href="http://127.0.0.1:5500/src/main/resources/templates/Admin-crud-publicaciones.html">
+                    <button>
+                        <img src="media/papelito.png" alt="xd">
+                        <span>Publicaciones</span>
+                    </button>
+                </a>
+            </div>
+
+            <div class="opcionesSideBar">
+                <a href="http://127.0.0.1:5500/src/main/resources/templates/Admin-Contactos.html">
+                    <button>
+                        <img src="media/a.png" alt="xd">
+                        <span>Contáctanos</span>
+                    </button>
+                </a>
+            </div>
+
+            <div class="opcionesSideBar">
+                <a href="http://127.0.0.1:5500/src/main/resources/templates/Admin-AvisoLegal.html">
+                    <button>
+                        <img src="media/contrato.png" alt="xd">
+                        <span>Informacion Legal</span>
+                    </button>
+                </a>
+            </div>
+        </nav>
+
+        <div class="contenedorGeneral">
+            <!--BARRA SUPERIOR-->
+            <header class="superior">
+                <div>
+                    <div class="menutoggle" onclick="ToggleMenu();"></div>
+                    <div class="titlerep">
+                        <h3>Agregar fuegos artificiales</h3>
+                    </div>
+
+                </div>
+                <div class="user">
+                    <img src="media/user.png" alt="pfp">
+                    <h5 class="nombreUs" id="usuarioNombre">El Pepe </h5>
+                    <h5 style="color: #d10054;">{Admin}</h5>
+                    <a href="#" onclick="cerrarSesion()">
+                        <h5 class="nombreUs" style="color:gray ;">Salir</h5>
+                    </a>
+                </div>
+            </header>
+
+            <div class="contenedorInformacion">
+                <div class="generalFiltros">
+                    <form class="Filtros">
+                        <!--FUEGO ARTIFIAL-->
+                        <div class="contFiltro">
+                            <div class="filtroTitulo">
+                                <a>Fuego Artificial:</a>
+                            </div>
+                            <div class="filtroLista">
+                                <input type="text" class="filtroBusqueda" name="Fuego_Artificial" id="nombreFuego"
+                                    placeholder="Ingrese el nombre del fuego artificial" />
+                                <input type="hidden" id="idFueguinho">
+                            </div>
+                        </div>
+
+                        <!--PRECIO-->
+                        <div class="contFiltro">
+                            <div class="filtroTitulo">
+                                <a>Precio:</a>
+                            </div>
+                            <div class="filtroLista">
+                                <input type="text" class="filtroBusqueda" id="precio" name="Precio" />
+                            </div>
+                        </div>
+
+                        <!--CANTIDAD-->
+                        <div class="contFiltro">
+                            <div class="filtroTitulo">
+                                <a>Cantidad:</a>
+                            </div>
+                            <div class="filtroLista">
+                                <input type="number" min="0" class="filtroBusqueda" id="cantidad" name="Cantidad" />
+                            </div>
+                        </div>
+
+                        <!--TIPO-->
+                        <div class="contFiltro">
+                            <div class="filtroTitulo">
+                                <a>Tipo:</a>
+                            </div>
+                            <div class="filtroLista">
+                                <select name="" class="filtroBusqueda" id="tipo">
+                                    <option value="" disabled selected hidden>Selecciona una opción</option>
+                                    <option value="Cohetes">Cohetes</option>
+                                    <option value="Candelas romanas">Candelas romanas</option>
+                                    <option value="Cascadas">Cascadas</option>
+                                    <option value="Sildadores">Sildadores</option>
+                                    <option value="Baterias">Baterias</option>
+                                    <option value="Petardos">Petardos</option>
+                                    <option value="Silbadores">Silbadores</option>
+                                    <option value="Candelas romanas">Candelas romanas</option>
+                                    <option value="Estrellas giratorias">Estrellas giratorias</option>
+                                    <option value="Fuegos artificiales acuáticos">Fuegos artificiales acuáticos</option>
+                                    <option value="Fuegos artificiales silenciosos">Fuegos artificiales silenciosos
+                                    </option>
+                                    <option value="Fuegos artificiales de colores específicos">Fuegos artificiales de
+                                        colores específicos</option>
+                                    <option value="Fuegos artificiales de formas específicas">Fuegos artificiales de
+                                        formas específicas</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!--URL-->
+                        <div class="contFiltro">
+                            <div class="filtroTitulo">
+                                <a>URL de foto:</a>
+                            </div>
+                            <div class="filtroLista">
+                                <input type="text" class="filtroBusqueda" id="url" name="URL"
+                                    placeholder="Ingrese URL de foto" />
+                            </div>
+                        </div>
+
+                        <!--TIENDA-->
+                        <div class="contFiltro">
+                            <div class="filtroTitulo">
+                                <a>Tienda:</a>
+                            </div>
+                            <div class="filtroLista">
+                                <select name="" id="tienda" class="filtroBusqueda">
+                                    <option value="" disabled selected hidden>Selecciona una opción</option>
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <!--Magnitud-->
+                        <div class="contFiltro">
+                            <div class="filtroTitulo">
+                                <a>Magnitud:</a>
+                            </div>
+                            <div class="filtroLista">
+                                <select name="" id="magnitud" class="filtroBusqueda">
+                                    <option value="" disabled selected hidden>Selecciona una opción</option>
+                                    <option value="Baja">Baja</option>
+                                    <option value="Media">Media</option>
+                                    <option value="Alta">Alta</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!--DESCRIPCION-->
+                        <div class="contFiltro">
+                            <div class="filtroTitulo">
+                                <a>Descripción:</a>
+                            </div>
+                            <div class="filtroLista">
+                                <input type="text" class="filtroBusqueda" id="descripcion" name="descripcion"
+                                    placeholder="Descripcion" />
+                            </div>
+                        </div>
+                    </form>
+                    <div class="btnfiltro">
+                        <button type="button" id="btnAgregarLocal" onclick="AgregarFuego()">Añadir</button>
+                        <button class="btnEliminar" onclick="ActualizarFuego()">Actualizar</button>
+
+                    </div>
+                </div>
+
+
+                <!--TABLA CON INFORMACION-->
+                <div class="contenedorTabla">
+                    <table class="tablaInfo" id="tablaInfo">
+                        <thead>
+                            <th col-index="1" class="tituloTabla" id="BI">ID</th>
+                            <th col-index="2" class="tituloTabla">Fuego Artificial</th>
+                            <th col-index="3" class="tituloTabla">Tipo</th>
+                            <th col-index="4" class="tituloTabla">Cantidad</th>
+                            <th col-index="5" class="tituloTabla">Precio</th>
+                            <th col-index="6" class="tituloTabla">Descripción</th>
+                            <th col-index="7" class="tituloTabla">Foto</th>
+                            <th col-index="8" class="tituloTabla">Tienda</th>
+                            <th col-index="9" class="tituloTabla">Magnitud</th>
+                            <th col-index="10" class="tituloTabla" id="BD">Operación</th>
+                        </thead>
+                        <!--TABLA DE DATOS-->
+                        <tbody id="cuerpoTabla">
+                        </tbody>
+                    </table>
+                </div>
+                <!--BOTONES DE PAGINACION-->
+                <div class="pagination">
+                </div>
+            </div>
+        </div>
+        <!--FIN CONTENEDOR GENERAL-->
+    </div>
+    </div>
+    <!--FOOTER-->
+    <footer>
+        <div class="footer-container">
+            <div class="footer">
+                <div class="info-footer">
+                    <img src="media/logoutp.png" alt="logo utp blanco">
+                    <p>Este sitio es administrado por la Facultad<br>
+                        de Ingenieria en Sistemas<br>
+                        Computacionales. Proyecto web donado<br>
+                        por el grupo 1LS121, segundo semestre<br>
+                        2023.
+                    </p>
+                </div>
+                <div class="contacto">
+                    <h1>Contacto</h1>
+                    <p>Avenida Universidad Tecnológica de Panamá, Vía Puente <br>
+                        Centenario, Campus Metropolitano Dr. Victor Levi Sasso, <br>
+                        Edificio No.3, tercer piso. <br>
+                        Teléfono: (507) 560-3639 y (507) 560-3619 <br>
+                        E-mail: <a class="email" href="#">sindy.delosrios@utp.ac.pa</a>
+                    </p>
+                </div>
+                <div class="redes">
+                    <img src="media/brand-facebook.png" alt="facebook">
+                    <img src="media/brand-instagram.png" alt="instagram">
+                    <img src="media/brand-youtube.png" alt="youtube">
+                    <img src="media/brand-linkedin.png" alt="linkedin">
+                    <img src="media/brand-x.png" alt="twitter x">
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023 - Universidad Tecnológica de Panamá</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/crud-fuegos.js"></script>
+</body>
+
+</html>

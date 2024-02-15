@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+body {
+  font-family: Montserrat;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/src/main/resources/templates/media/fondo.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.contenedorLogin {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.756);
+  width: 70%;
+  height: 50%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.contIniciar {
+  color: white;
+  width: 50%;
+  align-items: center;
+}
+
+.contIniciar h1 {
+  font-weight: 200;
+  margin-bottom: 15%;
+}
+
+.formularioInicioSesion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mensaje-error-barra {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  padding: 10px;
+  color: white;
+  font-size: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(103, 41, 64, 0.8);
+  border-radius: 2px;
+}
+.mensaje-error-barra img {
+  width: 20px;
+  height: auto;
+  float: left;
+  margin-right: 10px;
+}
+.cerrar-mensaje {
+  float: right;
+  cursor: pointer;
+}
+.contBotonesIniciar {
+  border-color: gray;
+  border-width: 1px;
+  border-style: solid;
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.contIniciar button {
+  width: 49.4%;
+  padding: 15px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border-style: none;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.contIniciar button:hover {
+  background-color: #fc4472;
+}
+
+.cuadroTexto {
+  padding: 15px;
+  margin-bottom: 5px;
+  width: 73%;
+  background-color: rgba(130, 130, 130, 0.3);
+  color: rgb(255, 255, 255);
+  border-color: gray;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.restaurar {
+  margin: 8px;
+  color: rgb(168, 168, 168);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.contRegistrarse {
+  display: flex;
+  flex-direction: column;
+  background-color: #e8305e;
+  color: white;
+  width: 50%;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.logoRegistro {
+  width: 350px;
+  margin-bottom: 0;
+}
+
+.contRegistrarse h1 {
+  font-size: 43px;
+  margin-top: 0px;
+  font-weight: 200;
+}
+
+.contRegistrarse button {
+  padding: 15px;
+  color: #fc4472;
+  font-weight: 600;
+  background-color: white;
+  border-style: none;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+  width: 30%;
+}
+
+.contRegistrarse button:hover {
+  background-color: rgb(255, 184, 184);
+}
+
+.btnIniciar {
+  border: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1em;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.cta {
+  position: relative;
+  margin: auto;
+  padding: 19px 22px;
+  transition: all 0.2s ease;
+}
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 28px;
+  background: #e8305e;
+  width: 56px;
+  height: 56px;
+  transition: all 0.3s ease;
+}
+.cta input {
+  position: relative;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  vertical-align: middle;
+}
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #111;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+.cta:hover:before {
+  width: 100%;
+  background: #f75a3e;
+}
+.cta:hover svg {
+  transform: translateX(0);
+}
+.cta:active {
+  transform: scale(0.96);
+}
